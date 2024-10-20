@@ -20,9 +20,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P          &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp BACKSPACE  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
+&kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P          &kp PRINTSCREEN
+&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp BACKSPACE  &kp DOUBLE_QUOTES
+&kp LSHFT   &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp SINGLE_QUOTE
                           &kp LCTRL  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp RALT
             >;
         };
@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB    &kp EXCL  &kp AT         &kp HASH          &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RPAR  &kp BSPC
+&kp LCTRL  &trans    &trans         &trans            &trans    &trans       &kp MINUS  &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &kp LESS_THAN  &kp GREATER_THAN  &trans    &trans       &kp UNDER  &kp PLUS   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE  &kp TILDE
+                                    &kp LGUI          &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
     };
