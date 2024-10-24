@@ -14,7 +14,7 @@
         acute_grave: mod_morph_acute_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp U00B4>, <&kp GRAVE>;  // Acute by default, Grave with Shift
+            bindings = <&kp A>, <&kp GRAVE>;  // Acute by default, Grave with Shift
             mods = <(MOD_LSFT|MOD_RSFT)>;  // Modifiers: Left or Right Shift
         };
     };
