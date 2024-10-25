@@ -10,6 +10,15 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        shift_J: shift_J {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_J";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT>, <&kp J>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         label = "Gustavo's Corne";
@@ -22,10 +31,10 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R             &kp T      &kp Y      &kp U              &kp I      &kp O    &kp P     &kp SINGLE_QUOTE
-&caps_word  &kp A  &kp S  &kp D     &mt LEFT_SHIFT F  &kp G      &kp H      &mt RIGHT_SHIFT J  &kp K      &kp L    &kp BSPC  &kp NUBS
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V             &kp B      &kp N      &kp M              &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
-                          &kp LGUI  &mo 1             &kp RET    &kp SPACE  &mo 2              &kp RALT
+&kp TAB     &kp Q  &kp W  &kp E     &kp R             &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P     &kp SINGLE_QUOTE
+&caps_word  &kp A  &kp S  &kp D     &mt LEFT_SHIFT F  &kp G      &kp H      &shift_J  &kp K      &kp L    &kp BSPC  &kp NUBS
+&kp LSHFT   &kp Z  &kp X  &kp C     &kp V             &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
+                          &kp LGUI  &mo 1             &kp RET    &kp SPACE  &mo 2     &kp RALT
             >;
         };
 
