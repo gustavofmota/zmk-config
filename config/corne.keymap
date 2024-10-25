@@ -15,7 +15,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_J";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_SHIFT>, <&kp J>;
+            bindings = <&kp J>, <&kp RIGHT_SHIFT>;
         };
     };
 
