@@ -15,7 +15,17 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_J";
             #binding-cells = <0>;
-            bindings = <&kp J>, <&kp RIGHT_SHIFT>;
+            bindings = <&hold_tap RIGHT_SHIFT J>, <&kp J>;
+        };
+
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <19>;
+            tapping-term-ms = <5>;
         };
     };
 
