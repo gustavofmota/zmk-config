@@ -43,6 +43,15 @@
         };
     };
 
+    macros {
+        accute: A_accute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "A_ACCUTE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         label = "Gustavo's Corne";
@@ -71,7 +80,7 @@
 
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &kp GRAVE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &accute
 &kp LSHFT   &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &kp PRINTSCREEN
                                         &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
             >;
