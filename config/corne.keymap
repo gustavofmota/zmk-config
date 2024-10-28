@@ -26,8 +26,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
         };
 
         shitft_f: shitft_f {
@@ -73,15 +73,6 @@
             bindings = <&hold_tap LEFT_ALT S>, <&kp S>;
 
             tapping-term-ms = <0>;
-        };
-    };
-
-    macros {
-        accute: A_accute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "A_ACCUTE";
         };
     };
 
