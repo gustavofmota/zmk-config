@@ -17,7 +17,7 @@
             #binding-cells = <0>;
             bindings = <&hold_tap RIGHT_SHIFT J>, <&kp J>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <100>;
         };
 
         hold_tap: hold_tap {
@@ -36,7 +36,7 @@
             #binding-cells = <0>;
             bindings = <&hold_tap RIGHT_SHIFT F>, <&kp J>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <100>;
         };
 
         ctrl_d: ctrl_d {
@@ -45,7 +45,7 @@
             #binding-cells = <0>;
             bindings = <&hold_tap LEFT_CONTROL D>, <&kp D>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <100>;
         };
 
         ctrl_k: ctrl_k {
@@ -54,7 +54,7 @@
             #binding-cells = <0>;
             bindings = <&hold_tap LEFT_CONTROL K>, <&kp K>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <100>;
         };
     };
 
