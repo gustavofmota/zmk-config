@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHITFT_F";
             #binding-cells = <0>;
-            bindings = <&hold_tap RIGHT_SHIFT F>, <&kp J>;
+            bindings = <&hold_tap RIGHT_SHIFT F>, <&kp F>;
 
             tapping-term-ms = <0>;
         };
