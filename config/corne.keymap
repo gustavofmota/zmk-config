@@ -16,6 +16,8 @@
             label = "SHIFT_J";
             #binding-cells = <0>;
             bindings = <&hold_tap RIGHT_SHIFT J>, <&kp J>;
+
+            tapping-term-ms = <100>;
         };
 
         hold_tap: hold_tap {
@@ -25,7 +27,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <0>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
         };
 
         shitft_f: shitft_f {
@@ -33,6 +35,8 @@
             label = "SHITFT_F";
             #binding-cells = <0>;
             bindings = <&hold_tap RIGHT_SHIFT F>, <&kp F>;
+
+            tapping-term-ms = <100>;
         };
 
         ctrl_d: ctrl_d {
@@ -40,6 +44,8 @@
             label = "CTRL_D";
             #binding-cells = <0>;
             bindings = <&hold_tap LEFT_CONTROL D>, <&kp D>;
+
+            tapping-term-ms = <100>;
         };
 
         ctrl_k: ctrl_k {
@@ -54,6 +60,8 @@
             label = "ALT_L";
             #binding-cells = <0>;
             bindings = <&hold_tap RIGHT_ALT L>, <&kp L>;
+
+            tapping-term-ms = <100>;
         };
 
         alt_s: alt_s {
@@ -61,6 +69,8 @@
             label = "ALT_S";
             #binding-cells = <0>;
             bindings = <&hold_tap LEFT_ALT S>, <&kp S>;
+
+            tapping-term-ms = <100>;
         };
     };
 
