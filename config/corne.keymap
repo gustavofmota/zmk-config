@@ -26,7 +26,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
@@ -86,10 +86,10 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W   &kp E     &kp R      &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P     &kp SINGLE_QUOTE
-&none      &kp A  &alt_s  &ctrl_d   &shitft_f  &kp G      &kp H      &shift_J  &ctrl_k    &alt_l   &kp BSPC  &kp NUBS
-&kp LSHFT  &kp Z  &kp X   &kp C     &kp V      &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
-                          &kp LGUI  &mo 1      &kp RET    &kp SPACE  &mo 2     &kp RALT
+&kp ESCAPE  &kp Q  &kp W   &kp E     &kp R      &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P     &kp SINGLE_QUOTE
+&kp TAB     &kp A  &alt_s  &ctrl_d   &shitft_f  &kp G      &kp H      &shift_J  &ctrl_k    &alt_l   &kp BSPC  &kp NUBS
+&kp LSHFT   &kp Z  &kp X   &kp C     &kp V      &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp SEMI  &kp GRAVE
+                           &kp LGUI  &mo 1      &kp RET    &kp SPACE  &mo 2     &kp RALT
             >;
         };
 
@@ -117,7 +117,7 @@
 
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp ASTRK  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH   &kp FSLH
+&trans     &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH   &kp FSLH
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBKT  &kp RBKT  &kp PIPE   &kp TILDE
                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
