@@ -26,7 +26,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <50>;
             flavor = "tap-preferred";
         };
 
@@ -78,7 +78,7 @@
         print_mac: print_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LSHFT &kp NUMBER_4>;
+            bindings = <&kp LS(LEFT_COMMAND) &kp NUMBER_4>;
             label = "PRINT_MAC";
         };
     };
