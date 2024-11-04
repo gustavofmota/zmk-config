@@ -26,7 +26,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
         };
 
@@ -74,6 +74,15 @@
         };
     };
 
+    macros {
+        print_mac: print_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LSHFT &kp NUMBER_4>;
+            label = "PRINT_MAC";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         label = "Gustavo's Corne";
@@ -103,7 +112,7 @@
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &kp PRINTSCREEN
+&kp LSHFT   &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &print_mac
                                         &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
             >;
         };
