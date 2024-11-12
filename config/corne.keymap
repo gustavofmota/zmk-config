@@ -11,15 +11,6 @@
 
 / {
     behaviors {
-        shift_J: shift_J {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_J";
-            #binding-cells = <0>;
-            bindings = <&hold_tap RIGHT_SHIFT J>, <&kp J>;
-
-            tapping-term-ms = <150>;
-        };
-
         hold_tap: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
@@ -72,6 +63,13 @@
             bindings = <&hold_tap LEFT_ALT S>, <&kp S>;
 
             tapping-term-ms = <100>;
+        };
+
+        shift_J: shift_J {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_J";
+            #binding-cells = <0>;
+            bindings = <&mt RIGHT_SHIFT J>, <&kp J>;
         };
     };
 
