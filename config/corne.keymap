@@ -59,9 +59,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
         };
     };
 
@@ -77,9 +76,9 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W   &kp E     &kp R     &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P     &kp SINGLE_QUOTE
-&none       &kp A  &alt_s  &ctrl_d   &shift_f  &kp G      &kp H      &shift_J  &ctrl_k    &alt_l   &kp BSPC  &kp NUBS
-&kp TAB     &kp Z  &kp X   &kp C     &kp V     &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp SEMI  &kp GRAVE
+&kp ESCAPE  &kp Q  &kp W   &kp E     &kp R     &kp T      &kp Y      &kp U     &kp I      &kp O                  &kp P     &kp SINGLE_QUOTE
+&none       &kp A  &alt_s  &ctrl_d   &shift_f  &kp G      &kp H      &shift_J  &ctrl_k    &hold_tap RIGHT_ALT L  &kp BSPC  &kp NUBS
+&kp TAB     &kp Z  &kp X   &kp C     &kp V     &kp B      &kp N      &kp M     &kp COMMA  &kp DOT                &kp SEMI  &kp GRAVE
                            &kp LGUI  &mo 1     &kp RET    &kp SPACE  &mo 2     &kp RALT
             >;
         };
