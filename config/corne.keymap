@@ -76,8 +76,17 @@
             bindings = <
 &kp F1  &kp F2          &kp F3      &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans          &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &kp LG(LS(F9))  &kp LG(F9)  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&to 4   &kp LG(LS(F9))  &kp LG(F9)  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
                                     &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&trans  &trans     &trans  &kp W   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp A   &kp S   &kp D   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &kp LSHFT  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
