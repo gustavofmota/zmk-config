@@ -94,7 +94,7 @@
             bindings = <
 &trans  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Q   &kp W   &kp E   &kp R     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp A   &trans  &kp D   &kp F     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp A   &trans  &kp D   &kp F     &kp G        &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &kp LALT  &kp SPACE    &trans  &to 0   &trans
             >;
         };
