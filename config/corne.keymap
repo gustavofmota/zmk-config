@@ -25,64 +25,77 @@
 
     keymap {
         compatible = "zmk,keymap";
+        label = "Gustavo's Corne";
 
-        // Layer 0 — Base
-        layer_0 {
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ' |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  BSPC  | ´ |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  ;  | ESC  |
+            //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
+
             bindings = <
-                &none        &kp Q        &kp W        &kp E        &kp R        &kp T
-                &kp TAB      &mt LGUI A   &mt LALT S   &mt LCTRL D  &mt LSHIFT F &kp G
-                &none        &kp Z        &kp X        &kp C        &kp V        &kp B
-                &none        &none        &none        &none        &mo 1        &kp SPACE
-
-                &kp LG(LC(LS(N4)))        &kp P        &kp O        &kp I        &kp U        &kp Y
-                &kp ESC      &mt LGUI BACKSPACE        &mt LALT L   &mt LCTRL K  &mt LSHIFT J &kp H
-                &none        &none        &kp DOT      &kp COMMA    &kp M        &kp N
-                &none        &none        &none        &none        &mo 2        &kp ENTER
+&kp ESCAPE  &kp Q  &kp W                 &kp E              &kp R                   &kp T      &kp Y      &kp U                    &kp I              &kp O                  &kp P     &kp SINGLE_QUOTE
+&none       &kp A  &hold_tap LEFT_ALT S  &hold_tap LCTRL D  &hold_tap LEFT_SHIFT F  &kp G      &kp H      &hold_tap RIGHT_SHIFT J  &hold_tap RCTRL K  &hold_tap RIGHT_ALT L  &kp BSPC  &kp NUBS
+&kp TAB     &kp Z  &kp X                 &kp C              &kp V                   &kp B      &kp N      &kp M                    &kp COMMA          &kp DOT                &kp SEMI  &kp GRAVE
+                                         &kp LGUI           &mo 1                   &kp RET    &kp SPACE  &mo 2                    &kp RALT
             >;
         };
 
-        // Layer 1 — Symbols/Func (your layer index 1)
-        layer_1 {
-            bindings = <
-                &none        &none        &none        &none        &none        &none
-                &none        &none        &none        &kp GRAVE    &kp LS(MINUS) &kp LS(N3)
-                &none        &none        &none        &none        &kp LS(N8)   &kp LS(N7)
-                &none        &none        &none        &none        &trans       &kp SPACE
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |   `   |
+            // | SHFT | OUT_USB | OUT_BLE |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-                &none        &none        &kp F10      &kp F9       &kp F8       &none
-                &none        &none        &none        &kp LS(GRAVE)&kp EQUAL    &kp LS(N4)
-                &none        &none        &none        &kp LS(N5)   &kp LS(N2)   &kp LS(BACKSLASH)
-                &none        &none        &none        &none        &trans       &kp ENTER
+            bindings = <
+&kp TAB     &kp N1        &kp N2        &kp N3    &kp N4  &kp N5       &kp N6   &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&bt BT_CLR  &trans        &trans        &trans    &trans  &trans       &trans   &trans    &kp UP    &trans     &trans  &trans
+&kp LSHFT   &out OUT_USB  &out OUT_BLE  &trans    &trans  &trans       &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp LG(LS(N4))
+                                        &kp LGUI  &trans  &kp SPACE    &kp RET  &trans    &kp RALT
             >;
         };
 
-        // Layer 2 — Brackets/Punct (your layer index 2)
-        layer_2 {
-            bindings = <
-                &none        &none        &none        &kp BACKSLASH   &kp LS(COMMA)      &kp LS(N9)
-                &none        &none        &kp LS(SLASH) &kp MINUS       &kp LS(SEMICOLON)  &kp LS(LEFT_BRACKET)
-                &none        &none        &none        &none            &kp LS(APOSTROPHE) &kp LEFT_BRACKET
-                &none        &none        &none        &none            &trans             &kp SPACE
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  *  | BSPC |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  /   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-                &none        &none        &none        &kp SLASH        &kp LS(DOT)        &kp LS(N0)
-                &none        &none        &kp LS(N1)   &kp LS(EQUAL)    &kp SEMICOLON      &kp LS(RIGHT_BRACKET)
-                &none        &none        &none        &none            &kp APOSTROPHE     &kp RIGHT_BRACKET
-                &none        &none        &none        &none            &trans             &kp ENTER
+            bindings = <
+&kp TAB    &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp ASTRK  &kp BSPC
+&trans     &kp QUESTION  &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH   &kp FSLH
+&kp LSHFT  &trans        &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBKT  &kp RBKT  &kp PIPE   &kp TILDE
+                                 &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
-        // Layer 3 — Nav / RGB / Numbers (your layer index 3)
-        layer_3 {
+        roof_layer {
             bindings = <
-                &none        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
-                &rgb_ug_toggle &kp LGUI   &kp LALT     &kp LCTRL    &kp LSHIFT   &none
-                &rgb_ug_cycle &rgb_ug_hue_down &rgb_ug_sat_down &rgb_ug_val_down &none &none
-                &none        &none        &none        &kp LGUI     &trans       &kp SPACE
+&kp F1  &kp F2          &kp F3      &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans          &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&tog 4  &kp LG(LS(F9))  &kp LG(F9)  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &to 5
+                                    &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
 
-                &none        &kp N0       &kp N9       &kp N8       &kp N7       &kp N6
-                &none        &mt LGUI BACKSPACE  &mt LALT RIGHT  &mt LCTRL UP  &mt LSHIFT DOWN  &kp LEFT
-                &none        &none        &kp END      &kp PAGE_UP  &kp PAGE_DOWN &kp HOME
-                &none        &none        &none        &none        &trans        &kp ENTER
+        gaming {
+            bindings = <
+&trans  &trans     &trans  &kp W   &trans  &trans       &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp A   &kp S   &kp D   &trans       &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &trans  &trans  &trans  &trans       &trans   &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &kp SPACE    &kp RET  &trans  &trans
+            >;
+        };
+
+        LeagueOfLegends {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Q   &kp W   &kp E   &kp R     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp A   &kp S   &kp D   &kp F     &kp G        &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LALT  &kp SPACE    &trans  &to 0   &trans
             >;
         };
     };
